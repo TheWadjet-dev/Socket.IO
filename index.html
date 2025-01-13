@@ -1,0 +1,19 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO - Hola Mundo</title>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>Socket.IO Hola Mundo</h1>
+  <p id="mensaje"></p>
+  <script>
+    const socket = io(); // Conectar al servidor Socket.IO
+
+    // Escuchar mensaje desde el servidor
+    socket.on('mensaje', (data) => {
+      document.getElementById('mensaje').textContent = data;
+    });
+  </script>
+</body>
+</html>
